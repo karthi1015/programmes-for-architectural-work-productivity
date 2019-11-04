@@ -1,0 +1,33 @@
+<Workspace Version="1.3.0.875" X="-424.244063737046" Y="215.892179552679" zoom="0.971377355631053" ScaleFactor="1" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
+  <NamespaceResolutionMap />
+  <Elements>
+    <Archilab.Grimshaw.UI.ViewTemplatesUI guid="71e55937-338d-4de9-bc96-6a429f0afc4f" type="Archilab.Grimshaw.UI.ViewTemplatesUI" nickname="View Templates" x="533.863751821352" y="-43.3273620204707" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" index="28:EGM_DD_Plan_Template_1-100" />
+    <Archilab.Grimshaw.UI.ViewTemplatesUI guid="be168d1d-9a66-4364-8878-d544104a5765" type="Archilab.Grimshaw.UI.ViewTemplatesUI" nickname="View Templates" x="469.079074275055" y="234.484817924269" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" index="48:Tempate_Dummy" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="b9639ff9-51aa-4b5f-ba2f-c2e3e9c1ec4e" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="View.RemoveFilter" x="1199.10946515264" y="65.6564732716901" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="C:\Users\Will\AppData\Roaming\Dynamo\Dynamo Revit\1.3\packages\archi-lab.net\bin\Archi-lab_Grimshaw.dll" function="Archilab.Grimshaw.Views.View.RemoveFilter@Revit.Elements.Views.View,Revit.Elements.Element[]">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="28205592-52b1-4283-b841-072778b65ca8" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="View.Filters" x="785.911719932787" y="233.59493894665" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Elements.Views.View.Filters">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="71e55937-338d-4de9-bc96-6a429f0afc4f" start_index="0" end="b9639ff9-51aa-4b5f-ba2f-c2e3e9c1ec4e" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="be168d1d-9a66-4364-8878-d544104a5765" start_index="0" end="28205592-52b1-4283-b841-072778b65ca8" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="28205592-52b1-4283-b841-072778b65ca8" start_index="0" end="b9639ff9-51aa-4b5f-ba2f-c2e3e9c1ec4e" end_index="1" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="63e4c383-9134-493e-85e8-216009962bb2" annotationText="Filters to remove" left="459.079074275055" top="187.59493894665" width="510.832645657732" height="139.889878977619" fontSize="30" InitialTop="233.59493894665" InitialHeight="321.641682462032" TextblockHeight="36" backgrouund="#FFC1D676">
+      <Models ModelGuid="be168d1d-9a66-4364-8878-d544104a5765" />
+      <Models ModelGuid="28205592-52b1-4283-b841-072778b65ca8" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="0a59220d-3def-4def-8de7-582bd6a8c26f" annotationText="Target View Template for filters to be removed from" left="523.863751821352" top="-161.327362020471" width="317" height="211" fontSize="30" InitialTop="-43.3273620204707" InitialHeight="123" TextblockHeight="108" backgrouund="#FFD4B6DB">
+      <Models ModelGuid="71e55937-338d-4de9-bc96-6a429f0afc4f" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+  </Annotations>
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>

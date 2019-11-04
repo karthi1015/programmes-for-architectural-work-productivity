@@ -1,0 +1,71 @@
+<Workspace Version="1.3.1.1736" X="-105.877078720936" Y="242.821655208858" zoom="0.72247190451638" ScaleFactor="1" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
+  <NamespaceResolutionMap />
+  <Elements>
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="a3acd97f-9dd6-4754-bcf7-49e48f53f2b0" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="Document.BackgroundOpen" x="814.785796446766" y="524.24370926085" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <ID value="972bbaf7-d877-4591-9966-c25fc23e0d61" />
+      <Name value="Document.BackgroundOpen" />
+      <Description value="This will open the input Revit files in the background." />
+      <Inputs>
+        <Input value="filePath" />
+      </Inputs>
+      <Outputs>
+        <Output value="Document" />
+      </Outputs>
+    </Dynamo.Graph.Nodes.CustomNodes.Function>
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="9017b3eb-41f0-4103-9dbf-10e7637aca73" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="Document.Close" x="1118.35420306143" y="521.418406087943" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="True" />
+      <ID value="87551f7a-ebe7-4542-b2fe-3a657fee7bdd" />
+      <Name value="Document.Close" />
+      <Description value="This will close the input Revit document. Offers a boolean toggle to save." />
+      <Inputs>
+        <Input value="document" />
+        <Input value="save" />
+      </Inputs>
+      <Outputs>
+        <Output value="closed" />
+      </Outputs>
+    </Dynamo.Graph.Nodes.CustomNodes.Function>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="7584894c-17f3-4286-b806-9aaae8d97e53" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="827.048212151812" y="709.595647577767" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="true;" ShouldFocus="false" />
+    <CoreNodeModels.Input.Directory guid="581290b0-3e4f-41ba-954b-2ef5ced656e3" type="CoreNodeModels.Input.Directory" nickname="Directory Path" x="-37.9719694679158" y="333.048939176456" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>No file selected.</System.String>
+    </CoreNodeModels.Input.Directory>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="fac57bc0-ad77-41b9-989a-15454c4ad110" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Directory.Contents" x="383.380802233411" y="313.419875564138" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.IO.Directory.Contents@var,string">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.Input.DirectoryObject guid="98630c21-3d78-4fc5-aed7-2f1a08e0b52a" type="CoreNodeModels.Input.DirectoryObject" nickname="Directory.FromPath" x="135.576160995382" y="310.93655114224" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </CoreNodeModels.Input.DirectoryObject>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="e34c4d96-bf33-4b29-92f5-0862669ddee5" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Application.OpenDocumentFile" x="721.731919405376" y="176.624931482304" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="..\..\..\..\..\..\AppData\Roaming\Dynamo\Dynamo Revit\1.3\packages\Rhythm\bin\Rhythm.dll" function="RevitElements.Application.OpenDocumentFile@string">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="8da9fe62-8e70-4b9b-a914-1b910def058b" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Batch.UpgradeFamilies" x="992.486487946769" y="175.796935859853" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="..\..\..\..\..\..\AppData\Roaming\Dynamo\Dynamo Revit\1.3\packages\Rhythm\bin\Rhythm.dll" function="Tools.Batch.UpgradeFamilies@string">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="a3acd97f-9dd6-4754-bcf7-49e48f53f2b0" start_index="0" end="9017b3eb-41f0-4103-9dbf-10e7637aca73" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="7584894c-17f3-4286-b806-9aaae8d97e53" start_index="0" end="9017b3eb-41f0-4103-9dbf-10e7637aca73" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="581290b0-3e4f-41ba-954b-2ef5ced656e3" start_index="0" end="98630c21-3d78-4fc5-aed7-2f1a08e0b52a" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="fac57bc0-ad77-41b9-989a-15454c4ad110" start_index="0" end="e34c4d96-bf33-4b29-92f5-0862669ddee5" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="98630c21-3d78-4fc5-aed7-2f1a08e0b52a" start_index="0" end="fac57bc0-ad77-41b9-989a-15454c4ad110" end_index="0" portType="0" />
+  </Connectors>
+  <Notes>
+    <Dynamo.Graph.Notes.NoteModel guid="0f1dbcf6-e25c-433b-8d9c-a737a92e7d22" text="The following Dynamo bulk family upgrade process was published by John Pierson http://sixtysecondrevit.com/2016-10-26-bulk-upgrade-revit-files-with-dynamobim/&#xD;&#xA;&#xD;&#xA;Only changes were adding the Directory.FromPath and renaming graph so you know what version of Dynamo was used as well as grouping the custom package nodes." x="-52.1478913431301" y="86.5081864287494" />
+  </Notes>
+  <Annotations>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="e26042e9-babb-45fa-abb0-ea7c16cf58e4" annotationText="Rhythm" left="804.785796446766" top="475.418406087943" width="543.568406614664" height="165" fontSize="30" InitialTop="521.418406087943" InitialHeight="149" TextblockHeight="36" backgrouund="#FFC1D676">
+      <Models ModelGuid="a3acd97f-9dd6-4754-bcf7-49e48f53f2b0" />
+      <Models ModelGuid="9017b3eb-41f0-4103-9dbf-10e7637aca73" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="97c1a6f2-bab6-4b33-8f1a-2f4afe8d183d" annotationText="input" left="-47.9719694679158" top="287.048939176456" width="132" height="140" fontSize="30" InitialTop="333.048939176456" InitialHeight="124" TextblockHeight="36" backgrouund="#FFFF7BAC">
+      <Models ModelGuid="581290b0-3e4f-41ba-954b-2ef5ced656e3" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+  </Annotations>
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>
