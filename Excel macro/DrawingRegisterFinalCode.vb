@@ -466,14 +466,14 @@ Sub PrintOut()
     
 '    ThisWorkbook.Sheets("PRINT").PrintOut copies:=1, ActivePrinter:="PDFCreator", printtofile:=True, collate:=True, prtofilename:=PSFileName
 
-'    ThisWorkbook.Sheets("PRINT").ExportAsFixedFormat Type:=xlTypePDF, Filename:=ThisWorkbook.Path & "\" & "Drawing Register Engenium", Quality:=xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas:=False, OpenAfterPublish:=True
+'    ThisWorkbook.Sheets("PRINT").ExportAsFixedFormat Type:=xlTypePDF, Filename:=ThisWorkbook.Path & "\" & "Drawing Register companyname", Quality:=xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas:=False, OpenAfterPublish:=True
     
     ThisWorkbook.Sheets("PRINT").ExportAsFixedFormat Type:=xlTypePDF, Filename:=ThisWorkbook.Path & "\" & wb_name, Quality:=xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas:=False, OpenAfterPublish:=True
     MsgBox "PDF has been sucessfully saved"
     Exit Sub
 
 '    ThisWorkbook.Sheets("PRINT").Select
-'    ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:=ThisWorkbook.Path & "\" & "Drawing Register Engenium", Quality:=xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas:=False, OpenAfterPublish:=True
+'    ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:=ThisWorkbook.Path & "\" & "Drawing Register companyname", Quality:=xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas:=False, OpenAfterPublish:=True
 '    ThisWorkbook.Worksheets("RAW_DATA").Activate
 '
 exitsub:
@@ -820,21 +820,21 @@ End Sub
 
 Sub Protect()
 
-    Worksheets("RAW_DATA").Protect "Engenium", DrawingObjects:=True, Contents:=True, Scenarios:=True _
+    Worksheets("RAW_DATA").Protect "companyname", DrawingObjects:=True, Contents:=True, Scenarios:=True _
         , AllowInsertingColumns:=True, AllowInsertingRows:=True, _
         AllowDeletingColumns:=True, AllowDeletingRows:=True, userinterfaceonly:=True
     Worksheets("RAW_DATA").EnableSelection = xlUnlockedCells
 
-    Worksheets("PRINT").Protect "Engenium", userinterfaceonly:=True
-    Worksheets("PRINT_TEMP").Protect "Engenium", userinterfaceonly:=True
-    Worksheets("TERMINAL").Protect "Engenium", userinterfaceonly:=True
+    Worksheets("PRINT").Protect "companyname", userinterfaceonly:=True
+    Worksheets("PRINT_TEMP").Protect "companyname", userinterfaceonly:=True
+    Worksheets("TERMINAL").Protect "companyname", userinterfaceonly:=True
 
 End Sub
 
 Sub UnProtect()
 
     For i = 1 To Sheets.Count
-        Sheets(i).UnProtect "Engenium"
+        Sheets(i).UnProtect "companyname"
     Next i
 
 End Sub
