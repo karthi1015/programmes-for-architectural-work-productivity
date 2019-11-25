@@ -590,17 +590,17 @@ End Sub
 
 Sub Protect()
 
-    Worksheets("DASHBOARD").Protect "Engenium", userinterfaceonly:=True
-    Worksheets("Project_Budget").Protect "Engenium", userinterfaceonly:=True
-    Worksheets("Scope_Change").Protect "Engenium", userinterfaceonly:=True
-    Worksheets("Rework").Protect "Engenium", userinterfaceonly:=True
+    Worksheets("DASHBOARD").Protect "password", userinterfaceonly:=True
+    Worksheets("Project_Budget").Protect "password", userinterfaceonly:=True
+    Worksheets("Scope_Change").Protect "password", userinterfaceonly:=True
+    Worksheets("Rework").Protect "password", userinterfaceonly:=True
 
 End Sub
 
 Sub UnProtect()
 
     For i = 1 To Sheets.Count
-        Sheets(i).UnProtect "Engenium"
+        Sheets(i).UnProtect "password"
     Next i
     
 End Sub
